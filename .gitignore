@@ -51,3 +51,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Ignore key files:
+*key.Rmd
