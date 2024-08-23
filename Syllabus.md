@@ -27,7 +27,7 @@ __Instructor:__ Lindsay Waldrop, Ph.D. (she/her/hers)
 
  - _Email address:_ waldrop@chapman.edu
  - _Office Location:_ 268 Keck 
- - _Office Hours:_ Wednesdays 3:30 - 5:00; Thursdays 11:30 - 1:00; by appointment.
+ - _Office Hours:_ Wednesdays 10 - 11 am; Thursdays 2 - 4 pm; by appointment.
 
 
 ### Course Materials
