@@ -1,0 +1,49 @@
+---
+title: "Assignment 1.1"
+author: "Your Name"
+date: "08/28/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.1 -- How Computers Work
+
+
+Write a brief answer explaining the following questions:
+
+### Question 1
+
+*What are the four main things every computer does? Describe why each of these are important for the function of a computer.*
+
+Your answer here.
+
+### Question 2
+
+*How does a computer represent the number 34 in its physical storage (i.e., how do you write this in binary)?*
+
+Your answer here.
+
+### Question 3
+
+*From the video, describe the function of circuits and logic used by computers.*
+
+Your answer here.
+
+### Question 4
+
+*What type of code does the translating between code you write and the circuits of a CPU?*
+
+Your answer here.
+
+### Question 5
+
+*What is the difference between memory and storage?*
+
+Your answer here.

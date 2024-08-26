@@ -1,0 +1,44 @@
+---
+title: "Assignment 1.2"
+author: "Your Name"
+date: "08/28/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.2 -- Interacting with Filesystems
+
+Write a brief answer explaining the following questions:
+
+### Question 1
+
+*What purposes does a filesystem serve?*
+
+Your answer here.
+
+### Question 2
+
+*What is a file path? What is the difference between an absolute and relative file path?*
+
+Your answer here.
+
+### Question 3
+
+*What is a working directory? Why do computers need to use working directories?*
+
+Your answer here.
+
+### Question 4
+
+*The following is a diagram of folders on my computer. My working directory is in the folder labeled “D.” I want to access the file “6.txt”. What is the file path I must use? (Remember “..” will move you up to a parent directory.)*
+
+Your answer here.
+
+![File system diagram.](filesys1.png)

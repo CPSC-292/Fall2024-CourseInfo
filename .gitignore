@@ -45,6 +45,8 @@ docs/
 # other file types
 *.html
 *.DS_Store
+*.mp4
+*.key
 
 # translation temp files
 po/*~

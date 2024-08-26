@@ -1,0 +1,19 @@
+---
+title: "Assignment 1.3"
+subtitle: "CPSC 292 Section ##"
+author: "Your Name"
+date: "08/28/2024"
+output: html_notebook
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.3 -- Create a Course Directory
+
+
+Create a directory using your file system manager GUI for all the material you’ll use in the course. Take a screen shot of the directory. Determine the absolute file path for this directory (from the root directory to the new CPSC directory), and annotate the screen shot with the path. Upload the annotated screen shot. 
+
+
