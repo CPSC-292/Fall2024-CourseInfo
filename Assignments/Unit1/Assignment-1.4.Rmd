@@ -1,0 +1,28 @@
+---
+title: "Assignment 1.4"
+subtitle: "CPSC 292 Section ## "
+author: "Your Name"
+date: "08/30/2024"
+output: html_notebook
+---
+
+## Assignment 1.4 -- Computer Games
+
+## Program sheet
+
+Group members: 
+
+ - person 1
+ - person 2
+ - person 3
+ 
+### Program steps: 
+
+ 1. Describe step 1
+ 2. Describe step 2
+ 3. Describe step 3
+ 
+ 
+### What is the end task? 
+
+Your answer here
