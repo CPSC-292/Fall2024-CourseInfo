@@ -47,6 +47,7 @@ docs/
 *.DS_Store
 *.mp4
 *.key
+*.mov
 
 # translation temp files
 po/*~
