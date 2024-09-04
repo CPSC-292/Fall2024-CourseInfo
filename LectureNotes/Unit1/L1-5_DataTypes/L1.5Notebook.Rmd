@@ -1,0 +1,205 @@
+---
+title: "Lecture 1.5 Notebook"
+author: "Lindsay Waldrop"
+date: "9/6/2024"
+output: html_notebook
+---
+
+## 1.5 Data Types
+
+R organizes different types of information in different types of objects. Each object has its own properties - you can perform different operations on it, perform different calculations, and it stores certain types of characters. 
+
+In this lecture, we'll look at each of the core data types of R. Run each code chunk in this Rmd to reproduce code in the lecture. 
+
+We already know how to assign information to objects in R:
+```{r}
+t <- 4
+```
+
+Here's a new way to assign, using the `assign()` function:
+
+```{r}
+assign("y", 8)
+```
+
+But this will not work: 
+```{r}
+assign(z, 8)
+```
+
+Why is this? Look at the help function: 
+```{r}
+?assign
+```
+
+Check the *class* of y:
+```{r}
+class(y)
+```
+
+### Numeric data class
+
+Example code used in lecture: 
+```{r}
+x <- 1.44
+class(1.44)
+is.numeric(x)
+y <- seq(1,4)
+is.numeric("y")
+```
+
+
+### Integer data class
+
+Example code used in lecture:
+```{r}
+is.integer(y)
+is.integer(8)
+is.integer(8L)
+```
+
+### Complex data class 
+
+Example code used in lecture:
+```{r}
+dot <- 2 + 2i
+is.complex(dot)
+```
+
+### Logical data class
+
+Example code used in lecture:
+```{r}
+hop <- TRUE
+is.logical(hop)
+blip <- TRUE
+blip <- T
+# This will return an error:
+#blip <- true 
+
+is.logical(blip)
+```
+
+### Relational operators
+
+Relational operators
+```{r}
+# Assigns value to a:
+a = 3
+# Relational operator equal to: 
+a == 4
+# Relational operator not equal to: 
+a != 4
+# Relational operator greater than: 
+a > 4
+# Relational operator less than: 
+a < 4
+```
+
+
+### Logical Operators 
+
+AND:
+```{r}
+TRUE & TRUE
+TRUE & FALSE
+```
+OR:
+```{r}
+TRUE | TRUE
+TRUE | FALSE
+FALSE | FALSE
+```
+
+### Logicals as numerics
+
+```{r}
+foo <- seq(1, 5 , 0.5)
+beep <- foo > 2
+sum(beep)
+```
+
+
+#### Check your understanding
+
+Will the following line of code work without error? 
+```{r}
+mean(c(T,F,F,F,T,T,T,F))
+```
+
+Write about the answer below.
+
+
+### Replacement and indexing with logicals
+
+```{r}
+foo[beep]
+anyvec <- c(3, 10, 12, 30, 45, 60)
+anyvec[c(T,F,T,F,T,F)]
+anyvec[c(T,F,T,F,T,F)] <- 0
+anyvec
+anyvec <- c(3, 10, 12, 30, 45, 60)
+anyvec[c(T,F,T,F,T,F)]
+```
+
+ERROR IN LECTURE!! This is wrong!!!
+```{r}
+anyvec[-c(T,F,T,F,T,F)] <- 0 #WRONG!!!!
+```
+This is right! Use a ! instead of a -:
+```{r}
+anyvec[!c(T,F,T,F,T,F)] <- 0
+anyvec
+```
+
+### Character data type
+
+
+```{r}
+blop <- "This is a string."
+length(blop)
+
+mynumber <- "35.4"
+mynumber*2
+
+my.string <- c("This", "is", "a", "string", ".")
+my.string
+length(my.string)
+my.other.string <- paste(my.string[1], my.string[2], my.string[3], 
+      my.string[4], my.string[5])
+```
+
+#### Check your understanding
+Assign the following value to a: 
+```{r}
+a <- "y"
+```
+
+What class is object a and how can you test this to make sure? 
+
+Write your code here:
+```{r}
+
+```
+
+Write about how you know this: 
+
+### Troubleshooting Corner
+
+Annotate this section with your own notes: 
+```{r}
+b <- 2
+b < 3
+b < 3 & > 7 
+```
+Why does this fail and the following work? 
+```{r}
+b < 3 & b > 7
+```
+
+Why does this fail? How do you fix it?
+```{r}
+randos <- runif(10)
+randos[>0.5]
+sum(randos>0.5)
+```

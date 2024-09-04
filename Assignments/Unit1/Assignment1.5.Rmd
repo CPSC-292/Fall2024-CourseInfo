@@ -1,0 +1,82 @@
+---
+title: "Assignment 1.5"
+author: "Your Name"
+date: "09/04/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.5 -- Basic R Functions
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+### Question 1
+
+*Command-line code that produces a search for the term “hexagon” in all R help documents. How many entries are there for help pages?*
+
+```{r}
+
+```
+
+### Question 2
+
+*Command-line code that retrieves the help page for the function “bquote”. How many arguments does this function take? What does it return?*
+
+```{r}
+
+```
+
+### Question 3
+
+*Assigns a value of 10.58e−6 to the letter b.*
+
+```{r}
+
+```
+
+### Question 4
+
+*Calculates the log of 2401 in base 4.*
+
+```{r}
+
+```
+
+### Question 5
+
+*Calculates the square root of 49.*
+
+```{r}
+
+```
+
+### Question 6
+
+*Calculates the mean of the following values: 10, 40, 43, 24, 50, 22, 45, 76.*
+
+```{r}
+
+```
+
+
+### Question 7
+
+*One line of code which contains a deliberate syntax error. Explain what the error is in a comment below the line and how to fix it.*
+
+```{r}
+
+```
+
+Turn in this RMD file.
