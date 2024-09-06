@@ -1,0 +1,146 @@
+---
+title: "Lecture 1.6 Notebook"
+author: "Lindsay Waldrop"
+date: "9/11/2023"
+output: html_notebook
+---
+
+## 1.6 Vectors
+
+### Creating vectors in R
+
+Creating vectors by assigning single values:
+```{r}
+v.scalar <- 3
+```
+
+Using the concatenate function `c()`:
+```{r}
+v.vector <- c(1, 2)
+```
+
+Check the length of a vector with the `length()` function:
+```{r}
+length(v.vector)
+```
+
+Make a vector with logicals: 
+```{r}
+v <- c(1L, 7L, 9L)
+length(v)
+```
+
+What happens when you include a character data type?
+```{r}
+v2 <- c(1, "flower", 9)
+```
+R will coerce other types of data into characters if given character in an array or vector!
+
+Making a sequence of numbers with `seq()` and `:`:
+```{r}
+vec <- seq(1, 10)
+vec2 <- 1:10
+vec3 <- seq(1, 10, 0.5)
+vec4 <- seq(1, 10, length.out = 50)
+```
+
+Making a vector with repeating values using `rep()`: 
+```{r}
+repvec <- rep(1, 10)
+vec1 <- c(1, 8, 10, 3)
+repvec2 <- rep(vec1, times = 4)
+repvec3 <- rep(vec1, times = 3, each = 2)
+```
+
+#### Check your understanding
+
+Write one line of code to recreate this vector and store it as the object `boop`
+1 1 1 2 2 2 3 3 3 4 4 4 5 5 5 1 1 1 2 2 2 3 3 3 4 4 4 5 5 5 1 1 1 2 2 2 3 3 3 4 4
+4 5 5 5
+
+```{r}
+
+```
+
+Write a *different* line of code that reproduces this vector and stores it as the object `boop2`:
+
+```{r}
+
+```
+
+Test whether or not `boop` and `boop2` are the same using: 
+```{r}
+all.equal(boop, boop2)
+```
+
+### Getting info about vectors
+
+Checking the length with `length()`:
+```{r}
+length(vec4)
+```
+Checking the data class with `class()`:
+```{r}
+class(vec4)
+class(v2)
+```
+
+### Indexing specific values in vectors
+
+Create a quick vector of even numbers between 2 and 20:
+```{r}
+blop <- seq(2, 20, by = 2)
+```
+
+Indexing each element is easy, just use square brackets `[ ]` and the position number of the value you want: 
+```{r}
+blop[1] # indexes the first element of blop
+blop[4]
+```
+
+You can pull several elements by listing the positions you want: 
+```{r}
+blop[6:9]
+blop[c(5, 7, 10)]
+blop[c(4, 6, 8)]
+```
+
+You can even remove a value by adding a negative sign `-` in front of the position, this will remove that value from the vector: 
+```{r}
+blop[-3]
+```
+
+### Vectorized calculations
+
+Calculations are vectorized in R, meaning that an operation on a vector acts on each element of a vector:
+```{r}
+blop*3
+blop+3
+blop - c(1, 2)
+```
+
+
+### Special Functions to vectors
+
+These special functions act on all elements of the vector to produce one value: 
+```{r}
+sum(blop) # sum all the elements in a vector
+prod(blop) # multiply the elements of a vector
+mean(blop) # calculates the mean across elements of vector
+sd(blop) # calculates standard deviation of elements of vector
+```
+
+#### Check Your understanding
+
+The vector `blippi` has 12 elements:
+```{r}
+blippi <- c(2, 8, 9, 19, 39, 1, 9, 3, 48, 10, 23, 87)
+```
+
+What is the correct way to positions 3, 7, and 12 in a single line of code?
+```{r}
+
+```
+
+Explain why the other suggested ways don't work: 
+

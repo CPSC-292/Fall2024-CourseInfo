@@ -1,0 +1,157 @@
+---
+title: "Assignment 1.6"
+author: "Your Name"
+date: "09/08/2023"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.6 -- Data Types in R
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+### Question 1
+
+*For the following inputs, list all of the atomic data types that would be appropriate to store data in R. `Appropriate' means that it retains the specific information that someone would want to keep, for example: storing the number 7 as a numeric would keep the value of 7, but storing 7 as a character would not. *
+
+*Code an example for each.*
+
+*Hint: vectors are stored using c()!*
+
+
+  a. *The word puppy*
+  
+  List data types here:
+  
+```{r}
+
+```
+  b. *The condition TRUE*
+  
+  List data types here:
+  
+```{r}
+
+```
+  
+  c. *The word h8tr*
+  
+  List data types here:
+  
+```{r}
+
+```
+  
+  d. *The vector < 1, 0, 1, 0 >*
+  
+  List data types here:
+  
+```{r}
+
+```
+  
+  e. *The vector < 9.99, 8.37 >*
+  
+  List data types here:
+  
+```{r}
+
+```
+
+  f. *The vector < 9 + 3i, 3i >*
+  
+  List data types here:
+
+```{r}
+
+```
+
+  g. *The number 16*
+  
+  List data types here:
+
+```{r}
+
+```
+
+  h. *The number 3.6*
+
+  List data types here:
+
+```{r}
+
+```
+
+### Question 2
+
+*For the following functions, what types of data do they accept as arguments and what data types do they return as values?*
+
+*Code a working example of each.*
+
+*Hint: look up the help documentation for each function!*
+
+ a. `median()`
+  
+  Your answer here.
+  
+```{r}
+
+```
+
+ b. `sd()`
+ 
+  Your answer here.
+  
+```{r}
+
+```
+ 
+ c. `any()`
+   
+  Your answer here.
+  
+```{r}
+
+```
+ 
+ d. `cut()`
+ 
+  Your answer here.
+  
+```{r}
+
+```
+ 
+ e. `order()`
+  
+  Your answer here.
+  
+```{r}
+
+```
+
+### Question 3
+
+*Run the function `is.character()` on the coded example for each answer in question 1 (give each example its own line). Explain what the output of these functions mean.*
+
+```{r}
+
+```
+
+Your answer here. 
+
+
+
+Turn in this RMD file.
