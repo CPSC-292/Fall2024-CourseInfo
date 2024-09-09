@@ -1,0 +1,104 @@
+---
+title: "Assignment 1.7"
+author: "Your Name"
+date: "09/09/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.7 -- Vectors
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+### Question 1
+
+*Create a vector that is a sequence of numbers between 30 and 54 with the total length of 600.*
+
+*By what amount is each element separated by? Have R calculate this difference in code.*
+
+```{r}
+
+```
+
+### Question 2
+
+*Create a vector that repeats the same sequence of numbers 5 through 8 fifteen times.*
+
+*Write another line of code that repeats these element-wise.*
+
+```{r}
+
+```
+
+### Question 3
+
+*Create a vector q3 that is a sequence of numbers between 1 and 400 that contains numbers spaced by 0.2 in the code chunk below, then answer each of the following parts with code below.*
+
+```{r}
+
+```
+
+  a. *What class is the vector q3?*
+
+```{r}
+
+```
+
+  
+  b. *How long is the vector q3?*
+  
+```{r}
+
+```
+
+  c. *What is the mean value of the vector q3?*
+  
+```{r}
+
+```
+
+  d. *What value is at position 78 in the vector q3?*
+  
+```{r}
+
+```
+
+  e. *What is the sum of the numbers in positions 611 through 762 of the vector q3?*
+  
+```{r}
+
+```
+
+### Question 4
+
+*You have a vector pop1 which has the elements: < 5, 7.3, 2.1, 11 >. You’d like to add the value 1.3 to each element of pop1 to create a new vector pop2. Write code to do this.*
+
+```{r}
+pop1 <- c(5, 7.3, 2.1, 11)
+```
+
+*Is the way you've added 1.3 to pop1 adding by element or vectorized? How can you tell?*
+
+Your answer here. 
+
+### Question 5
+
+*The following line of code does not work. Correct the error so that a vector is produced.*
+
+```{r}
+pop3 <- (3, 4, 7, 1, 3)
+```
+
+Turn in this RMD file.
