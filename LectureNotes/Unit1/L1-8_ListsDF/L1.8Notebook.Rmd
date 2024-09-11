@@ -1,0 +1,260 @@
+---
+title: "Lecture 1.8 Notebook"
+author: "Lindsay Waldrop"
+date: "9/13/2024"
+output: html_notebook
+---
+
+## 1.8 Lists and Data Frames
+
+### Data sets in base R
+
+Base R comes with several sample data sets! To view, run:
+```{r}
+data()
+```
+
+To load a data set, such as the `BOD` data set, in RStudio's environment, you can use: 
+```{r}
+data("BOD")
+force(BOD)
+```
+Load the following example data sets:
+```{r}
+# Example list data set:
+data("ability.cov")
+force(ability.cov)
+# Example data frame data set:
+data("ToothGrowth")
+force(ToothGrowth)
+```
+
+### Creating and viewing lists
+
+Create a list with the `list()` function:
+```{r}
+flop <- list(matrix(data = 1:4, nrow = 2, ncol = 2), c(T, F, T, T), "hello")
+```
+
+Inspect your list in RStudio using `View()`:
+```{r}
+View(flop)
+```
+
+The list `flop` has three __members__: (a matrix, a vector with four elements, and a vector with one element). 
+
+### Member reference of lists
+
+Reference a member of a list using double brackets: 
+```{r}
+flop[[3]] # third member of flop, the vector with one element
+```
+
+Adding single brackets with reference individual elements of the member:
+```{r}
+flop[[2]][2] # the second member of flop, the second element of that 4-member vector
+flop[[1]][4] # the first member of flop, the fourth element of the matrix
+flop[[1]][2,2] # same as previous line, using two position indexing
+```
+
+If you want multiple members of a list, you can perform list slicing by using single brackets with a vector: 
+```{r}
+flop[c(2, 3)] # cuts out the matrix
+```
+For easy reference, you can also name the members of your list: 
+```{r}
+names(flop) <- c("mymatrix", "mylogicals", "mystring")
+```
+
+Reference using a dollar sign: 
+```{r}
+flop$mylogicals
+flop$mymatrix[1,1]
+```
+
+### List info
+
+Information for lists is a bit different than for other classes. 
+
+If you use `length()`, you will get the number of members:
+```{r}
+length(flop)
+```
+
+Most other functions will return `NULL` if you use them on lists: 
+```{r}
+dim(flop)
+```
+
+But you can use these on the individual members of the list like normal:
+```{r}
+dim(flop$mymatrix)
+length(flop$mystring)
+```
+
+### Modifying lists
+
+Add members to a list by assigning a new number or named member of the list with the assign arrow: 
+```{r}
+flop[[4]] <- c(3, 4, 7, 1, 10)
+flop$blep <- "Haha"
+```
+
+#### Check your understanding
+
+Create a list in which each member contains one of each data types you've learned so far in the course!
+
+```{r}
+
+```
+
+### Creating Data Frames
+
+Create a data frame using the function `data.frame()`:
+```{r}
+mydataframe <- data.frame(x = c(3.2, 5.4, 2.5, 4.4, 7.8), y = c(2.1, 1.0, 3.3, 2.9, 4.1), condition = c(T, F, T, T, F))
+```
+
+Rename columns using `colnames()`:
+```{r}
+colnames(mydataframe) <- c("up", "down", "cow")
+```
+
+You can also name the rows: 
+```{r}
+row.names(mydataframe) <- c("one", "two", "three", "four", "five")
+```
+
+### Indexing data frames
+
+Rerun this line:
+```{r}
+mydataframe <- data.frame(x = c(3.2, 5.4, 2.5, 4.4, 7.8), y = c(2.1, 1.0, 3.3, 2.9, 4.1), condition = c(T, F, T, T, F))
+```
+
+Indexing data frames by the following methods: 
+```{r}
+mydataframe[2,3] # Index a position by row and column
+mydataframe[["y"]] # Index by column name
+mydataframe[["y"]][4] # Index by column name then row
+mydataframe$y # Index by column name with dollar sign
+mydataframe$y[4] # Index by column name with dollar sign then row
+```
+
+There a bunch more methods, which are useful in certain circumstances. See alignment chart. 
+
+### Modifying data frames
+
+Add a column by assigning it with a new name: 
+```{r}
+mydataframe$metric <- seq(1, 5)
+```
+
+Add multiple rows using "row bind" function `rbind()`:
+```{r}
+mydataframe <- rbind(mydataframe, mydataframe)
+```
+
+Add multiple columns using "column bind" function `cbind()`:
+```{r}
+mydataframe <- cbind(mydataframe, mydataframe)
+```
+
+### Info on data frames
+
+Print out the first few lines: 
+```{r}
+head(ToothGrowth)
+```
+
+Print out the last few lines: 
+```{r}
+tail(ToothGrowth)
+```
+
+Print out a summary of columns of the data frame: 
+```{r}
+summary(ToothGrowth)
+```
+
+#### Check your understanding
+
+In the `ToothGrowth` data set, how can you print out all the measured tooth lengths from this study?
+
+```{r}
+
+```
+
+How can you find the mean and standard deviations of these lengths?
+```{r}
+
+```
+
+
+### Logical record subsets
+
+Run the following line to create a matrix: 
+```{r}
+my_matrix2 <- matrix(seq(1, 21), nrow = 7, byrow = TRUE)
+my_matrix3 <- matrix(seq(1, 21), nrow = 7, byrow = FALSE)
+```
+
+This line of code will subset only two-digit numbers (those greater than 9):
+```{r}
+my_matrix2[4:7,]
+```
+This pulls the part of the matrix that only contains numbers greater than 9, but doesn't work for `my_matrix3` because it's constructed differently:
+```{r}
+my_matrix3[4:7,]
+```
+
+Another option is to use a logical record subset. This involves testing whether or not elements of the matrix are greater than 9: 
+```{r}
+my_matrix2 > 9
+```
+Positions where the elements are less than or equal to 9 are now `FALSE` where if they are greater than 9, they are `TRUE`. We can use this matrix to pull only the values that are true by using it inside square brackets: 
+```{r}
+my_matrix2[my_matrix2 > 9]
+```
+
+This method also works with `my_matrix3` since it doesn't rely on the positions of the numbers or how the matrix was constructed:
+```{r}
+my_matrix3[my_matrix3 > 9]
+```
+
+In data frames, you can find data associated with animals that were given orange juice (or `OJ`). First, find the rows in the column `supp` (or supplement) are equal to `OJ`:
+```{r}
+ToothGrowth$supp == "OJ"
+```
+
+Now use this logical vector to retrieve the records from `ToothGrowth`:
+```{r}
+ToothGrowth[ToothGrowth$supp == "OJ",]
+```
+
+Note that the logical is being used in the row spot. If you forget the comma, you will get an error: 
+```{r}
+ToothGrowth[ToothGrowth$supp == "OJ"]
+```
+
+No problem, just don't forget the comma! 
+
+
+#### Check your understanding
+
+In the `ToothGrowth` data set, how can you print out all the measured tooth lengths from their study that were only given a dose of 1.0?
+
+```{r}
+
+```
+
+How can you find the mean and standard deviation of these lengths?
+```{r}
+
+```
+
+Can you find the mean of tooth lengths for animals given an OJ does of 1.0?
+```{r}
+
+```
+

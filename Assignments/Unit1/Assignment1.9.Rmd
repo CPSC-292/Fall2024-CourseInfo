@@ -1,0 +1,75 @@
+---
+title: "Assignment 1.9"
+author: "Your Name"
+date: "09/11/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.9 -- Arrays
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+### Question 1
+
+*Create a three-dimensional array using `sample()` to generate data and store it in a variable called my3Darray. (The function `sample()` can be used to generate random whole numbers from a range you specify.) *
+
+```{r}
+
+```
+
+*Use this array to answer the following questions.*
+
+  a. *What dimensions are your 3D array?*
+  
+```{r}
+
+```
+
+  b. *How could you subset a part of your array to a single 2D matrix? Create a working example.*
+  
+```{r}
+
+```
+
+### Question 2
+
+*Create a four-dimensional array using `sample()` to generate data and store it in a variable called my4Darray.*
+
+```{r}
+
+```
+
+*Use this array to answer the following questions.*
+
+  a. *What dimensions are your 4D array?*
+  
+```{r}
+
+```
+  
+  b. *How could you subset a part of your array to a single 2D matrix? Create a working example.*
+  
+```{r}
+
+```
+  
+  c. *How could you subset a part of your array to a single 3D array? Create a working example.*
+  
+```{r}
+
+```
+
+Turn in this RMD file.

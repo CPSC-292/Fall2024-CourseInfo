@@ -1,0 +1,80 @@
+---
+title: "Assignment 1.8"
+author: "Your Name"
+date: "09/11/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.8 -- Matrices
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+### Question 1
+
+*Create a 5 by 6 matrix of random numbers using `runif()` to generate data and store it in a variable named my.matrix1. (The function `runif()` pulls pseudorandom numbers from a normal distribution.)*
+
+```{r}
+
+```
+
+### Question 2 
+
+*Create another matrix using a different method with `runif()` to generate data that is 6 by 5 and store it in a variable named my.matrix2. HINT: use cbind() or rbind().*
+
+```{r}
+
+```
+
+
+### Question 3
+
+*Use functions to find each of these values.* 
+
+  a. *What are the dimensions of your two matrices?* 
+  
+```{r}
+
+```
+
+  b. *How many rows and columns do each have?* 
+  
+```{r}
+
+```
+  
+  c. *How many numbers do each contain?*
+  
+```{r}
+
+```
+
+### Question 4
+
+*What are the values at column 5 row 3 for each of your two matrices?*
+
+```{r}
+
+```
+
+### Question 5
+
+*The following line of code does not work. Correct the error so that my.matrix4 is a 5 by 11 matrix.*
+
+```{r}
+my.matrix4 <- cbin(my.matrix1, my.matrix2)
+```
+
+Turn in this RMD file.
