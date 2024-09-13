@@ -1,0 +1,65 @@
+---
+title: "Assignment 1.11"
+author: "Your Name"
+date: "09/13/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.11 -- Lists
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+### Question 1
+
+*What are the differences between lists and data frames? When is it best to use a list versus a data frame?*
+
+Your answer here.
+
+### Question 2
+
+*Create a list named my.list that contains at least three members of three different data types/classes. Include the name in the next line so that R prints the list as output.*
+
+```{r}
+
+```
+
+### Question 3
+
+*Load the data set ability.cov and use it to perform the following:*
+
+```{r}
+
+```
+
+  a. *Write a line of code that indexes the covariance value (cov) for maze and picture.*
+  
+```{r}
+
+```
+  
+  b. *Write another line of code that indexes the covariance value for blocks and reading.*
+  
+```{r}
+
+```
+  
+  c. *Subset the covariance value matrix (cov) so it shows only values associated with vocab.*
+  
+```{r}
+
+```
+
+Turn in this RMD file.

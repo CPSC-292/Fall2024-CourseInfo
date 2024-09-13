@@ -1,0 +1,140 @@
+---
+title: "Lecture 1.9 Notebook"
+author: "Lindsay Waldrop"
+date: "9/16/2024"
+output: html_notebook
+---
+
+## 1.9 Factors, Special Values, & Class Coercion
+
+### Factors
+
+Factors are essentially a numeric with a unique label:
+
+```{r}
+colors <- c("white", "blue", "red", "blue", "red", "red")
+color.fac <- factor(colors)
+color.fac
+as.numeric(color.fac)
+```
+
+Create factors with the `factor()` function: 
+```{r}
+pets <- factor(c("dog", "cat", "squirrel", "dog", "cat", 
+                 "dog", "dog", "bear", "cat", "fish"))
+```
+
+You create the factor from a vector (only!). It will automatically assign the levels of the factor from the options in the vector. However, you can also assign specific levels using the `levels` argument:
+
+```{r}
+pets <- factor(c("dog", "cat", "squirrel", "dog", "cat", 
+                 "dog", "dog", "bear", "cat", "fish"), 
+               levels = c("dog", "cat", "fish", "bear", 
+                          "squirrel", "wombat"))
+```
+
+Notice that now "wombat" is an option, even if it doesn't appear in the original vector. 
+
+Factors can be unordered (like `pets`) or ordered using the `ordered` argument: 
+```{r}
+# ordered factor
+pet_quality <- c("great", "good", "ok", "great", "good", 
+                 "great", "great", "poor", "good", "ok")
+pet_quality <- factor(pet_quality, ordered = TRUE, 
+                      levels = c("poor", "ok", "good", 
+                                 "great"))
+```
+
+The order of the levels can be set by the order of elements in the `levels` argument.
+
+The `levels()` function can return the levels of a factor, and `nlevels()` will return just the number of levels:
+```{r}
+levels(pets)
+nlevels(pets)
+levels(pet_quality)
+nlevels(pet_quality)
+```
+
+You can retrieve an individual element by indexing it like a vector: 
+```{r}
+levels(pets)[4]
+```
+
+You can test if a factor if ordered or unordered using `is.ordered()`:
+```{r}
+is.ordered(pets)
+is.ordered(pet_quality)
+```
+
+#### Check your understanding
+
+Create a data frame that contains: 
+
+ - a column of class character describing something in your current surroundings
+ - a column of class factor describing the color of those items
+ 
+```{r}
+
+```
+
+### Special values
+
+Here are the special values: 
+```{r}
+Inf
+-Inf
+NA
+NaN
+NULL
+```
+#### Check your understanding
+
+What would you do in the following scenarios?
+
+ - You have a data set in a data frame. It is very large, and you want to know whether or not it has missing data values. You’d also like to remove those values so that you only have a set of complete observations.
+ 
+ - You have a data frame in which you use your own function with vectorized calculations. When you look at the output, it is NULL. What has happened? What should you do? 
+ 
+ 
+### Class coercion
+
+Lists are a special case since they are comprised of members of different classes. `as.list()` will coerce data into list form. `unlist()` will coerce list members into atomic vectors. 
+
+```{r}
+data("ability.cov")
+unlisted.cov <- unlist(ability.cov)
+```
+
+Dates are kind of terrible in R, but here are a couple examples:
+```{r}
+date1 <- "2022/07/12 10:00:30"
+new.date1 <- as.POSIXct(date1)
+new.date2 <- as.POSIXlt(date1)
+```
+
+
+#### Check your understanding
+
+Which command can accomplish the following coercions?
+
+A logical vector into a numeric vector:
+```{r}
+
+```
+
+A numeric vector into a character vector:
+```{r}
+
+```
+
+Two vectors into a data frame:
+```{r}
+
+```
+
+A list into a vector: 
+```{r}
+
+```
+
+
