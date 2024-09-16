@@ -1,0 +1,128 @@
+---
+title: "Assignment 1.12"
+author: "Your Name"
+date: "09/16/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.12 -- Factors and Special Values
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+### Question 1
+
+*Load the data set Indometh.*
+
+```{r}
+
+```
+
+*Use it to answer the following questions.*
+
+  a. *How many levels does the column Subject have?*
+
+```{r}
+
+```
+  
+  b. *What are the levels?* 
+  
+```{r}
+
+```
+  
+  c. *Are they ordered or unordered?*
+  
+```{r}
+
+```
+
+### Question 2
+
+  a. *Make a vector that contains the names of seven fruits, some that you like and some that you don’t. Name it fruits.*
+
+```{r}
+
+```
+
+  b. *Convert fruits into a vector of unordered factors. What levels are in fruits now?*
+  
+```{r}
+
+```
+
+  c. *Create another vector that describes the color of each of these fruits named fruit.colors. Be sure that the colors in the same order as fruits so that they match up. Convert this vector into unordered factors.*
+  
+```{r}
+
+```
+
+  d. *Now create a third vector that rates your preference for each fruit in fruits. Ratings can be up to you, but they should be ordered (like good, better, best) and contain at least 3 rankings. Convert this vector into ordered factors.*
+  
+```{r}
+
+```
+
+  e. *Now, bind all three factored vectors together into a data frame named fruit.info. Be sure each column has a good name!*
+  
+```{r}
+
+```
+
+### Question 3
+
+*Load the data set airquality.*
+
+```{r}
+
+```
+
+  a. *Does this data set contain missing values?*
+  
+```{r}
+
+```
+  
+  b. *How many missing values are there in each of the data columns (Ozone, Solar.R, Wind)?*
+  
+```{r}
+
+```
+  
+  c. *Produce a data frame airquality.cleaned that removes all observations (rows) with missing data.*
+  
+```{r}
+
+```
+
+### Question 4
+
+*Give a quick explanation of what each special value means.*
+
+  a. `Inf`
+  
+  Your answer here
+  
+  b. `NA`
+  
+  Your answer here
+  
+  c. `NaN`
+  
+  Your answer here
+  
+
+Turn in this RMD file.

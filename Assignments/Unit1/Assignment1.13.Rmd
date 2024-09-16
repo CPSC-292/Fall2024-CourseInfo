@@ -1,0 +1,79 @@
+---
+title: "Assignment 1.13"
+author: "Your name"
+date: "09/16/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.13 -- Class coercion
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+### Question 1
+
+*Load the data set InsectSprays.*
+
+```{r}
+
+```
+
+*Use it to answer the following questions.*
+
+  a. *Convert the spray column to a numeric vector.*
+
+```{r}
+
+```
+  
+  b. *Convert the spray column to a characters vector.* 
+  
+```{r}
+
+```
+  
+  c. *Convert the count column into an integer vector.*
+  
+```{r}
+
+```
+
+  d. *Use any mathematical expression with a comparison operator to convert the count column into a logical vector.*
+  
+```{r}
+
+```
+
+  e. *Convert the logical vector in part d into a numeric vector.*
+  
+```{r}
+
+```
+
+### Question 2
+
+*Load the data set state. This is a series of 5 vectors of different lengths and compositions (state.abb, state.area, state.division, state.name, state.region), 1 matrix (state.x77), and 1 list (state.center). Make these all into a single list with 7 members called state.info Make sure that each member of the list has a name.*
+
+```{r}
+data("state")
+```
+
+
+### Question 3
+
+*Can you convert state.info into a data frame? If so, write the code. If not, explain why.*
+
+
+Turn in this RMD file.

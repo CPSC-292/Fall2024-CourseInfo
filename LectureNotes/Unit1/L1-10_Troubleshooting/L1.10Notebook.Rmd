@@ -1,0 +1,47 @@
+---
+title: "Lecture 1.10 Notebook"
+author: "Lindsay Waldrop"
+date: "9/18/2024"
+output: html_notebook
+---
+
+## 1.10 Troubleshooting Problems
+
+### Troubleshooting Steps
+
+1. Did you spell it correctly? 
+```{r}
+data("Loblolly")
+data(Loblollly)
+data(Lobolly)
+data(Blololly)
+data(Loblolly)
+```
+
+2. Is the capitalization/punctuation correct?
+```{r}
+Loblolly$Age
+Loblolly$age
+```
+
+3. Is the syntax correct?
+```{r}
+d[ <- 3
+d <- c(3, 5, 5
+pop-v <- 4
+3flips <- 3
+```
+
+4. Is the object in your environment?
+```{r}
+hop
+```
+
+### Splitting 
+
+Practice splitting on these lines:
+```{r}
+data("Indometh")
+mean(Indometh$conc[Indometh$Time==8.00])
+```
+
