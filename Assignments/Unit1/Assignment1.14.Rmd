@@ -1,0 +1,106 @@
+---
+title: "Assignment 1.14"
+author: "Your Name"
+date: "09/18/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+### Collaboration team: 
+
+Record who you've worked on the assignment with here. 
+
+
+## Assignment 1.14 -- 
+
+```{r setup, include=FALSE}
+# Do not alter this section of code!
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a R code in each chunk (gray space) that provides answers to the following questions. If any questions need direct answers, give them in regular text space (white space).
+
+Each subpart of code below has at least one error. Correct each error, write a short explanation of your fix, and turn in the corrected version of this script. The script should run cleanly using "Source" in a clean working environment.
+
+### Question 1
+
+```{r}
+data("Loblolly")
+```
+
+  a. 
+
+```{r}
+mean(Lobolly$height)
+```
+  
+  Your answer here.
+  
+  b. 
+  
+```{r}
+sd(Loblolly$Height)
+```
+  
+  Your answer here.
+  
+  c. 
+  
+```{r}
+mean(Lobolly$seed)
+```
+
+  Your answer here.
+
+  d. 
+  
+```{r}
+std(Loblolly$Age)
+```
+
+  Your answer here.
+
+### Question 2
+  
+```{r}
+mean(vec1)
+vec1 <- c(3, 9, 10, 3, 29)
+```
+
+Your answer here.
+
+### Question 3
+
+```{r}
+data("ChickWeight")
+```
+
+  a. 
+  
+```{r}
+chick1.dat <- subset(ChickWeight, (ChickWeight$Diet==1)
+
+```
+  
+  Your answer here.
+  
+  b. 
+  
+```{r}
+chick1.dat <- subset(ChickWeight, ChickWeight$Diet=2)
+```
+  
+  Your answer here.
+  
+  c. 
+  
+```{r}
+mean(ChickWeight$weight(ChickWeight$Time==0))
+```
+  
+  Your answer here. 
+  
+
+Turn in this RMD file.
