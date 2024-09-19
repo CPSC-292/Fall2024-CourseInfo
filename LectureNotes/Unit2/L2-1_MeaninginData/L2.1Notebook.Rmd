@@ -1,0 +1,33 @@
+---
+title: "Lecture 2.1 Notebook"
+author: Lindsay Waldrop
+date: 9/23/2023
+output: html_notebook
+---
+
+## Example CO2 plot
+
+Plotting monthly *in-situ* carbon dioxide concentrations measured at the Mauna Loa station 1958-2019.
+
+Read and clean the data: 
+
+```{r}
+co2_dat <- read.csv("monthly_in_situ_co2_mlo.csv", skip=56, header=TRUE) # loads the data from CSV file
+# assigns new names for columns 
+colnames(co2_dat) <- c("year","mn","date_excel","date",
+                       "seasonal_co2","seasonal_adj_co2",
+                       "seasonal_fit_co2","seasonal_fit_adj_co2",
+                       "seasonal_filled_co2","seasonal_filled_adj_co2") 
+
+# Clean out data points that are negative 
+co2_dat <- co2_dat[sign(co2_dat$seasonal_co2) != -1,]
+```
+
+Make a plot of CO2 values in August of every year:
+
+```{r}
+plot(x = co2_dat$year, y = co2_dat$seasonal_adj_co2, 
+     type = "l", xlab = "Year", ylab = "CO2 (ppm)")
+```
+
+

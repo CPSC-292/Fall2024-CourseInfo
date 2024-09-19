@@ -48,6 +48,7 @@ docs/
 *.mp4
 *.key
 *.mov
+*.tex
 
 # translation temp files
 po/*~
@@ -57,3 +58,7 @@ rsconnect/
 
 # Ignore key files:
 *key.Rmd
+
+# Specific files: 
+LectureNotes/Unit1/L1-8*/*.png
+LectureNotes/Unit1/L1-10*/*.png
