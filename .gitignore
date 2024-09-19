@@ -49,6 +49,10 @@ docs/
 *.key
 *.mov
 *.tex
+*.out
+*.log
+*.aux
+*.gz
 
 # translation temp files
 po/*~
