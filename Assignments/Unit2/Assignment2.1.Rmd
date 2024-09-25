@@ -1,0 +1,45 @@
+---
+title: "Assignment 2.1"
+author: "Your Name"
+date: "9/25/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+## Assignment 2.1 
+
+```{r, include=TRUE}
+# Loading required libraries
+
+```
+
+All graphs should be completed with basic graphics.
+
+### Question 1
+
+*Load the pressure data set. Make a plot of vapor pressure in mmHg versus temperature in C of mercury. Set the axis labels and title. Make this plot using a formula structure (i.e., y~x).*
+
+```{r, include=TRUE}
+
+```
+
+
+### Question 2
+
+*Load the DNase data set. Make a plot of density versus concentration. Set the axis labels and title. Make the point shape dependent on Run number. Make this plot without using a formula structure.*
+
+```{r, include=TRUE}
+
+
+```
+
+
+### Question 3
+
+*Load the dataset Loblolly. Make a plot of height versus age of trees where data are triangle-shaped points. Color the points according to the seed number.*
+
+```{r, include=TRUE}
+
+```

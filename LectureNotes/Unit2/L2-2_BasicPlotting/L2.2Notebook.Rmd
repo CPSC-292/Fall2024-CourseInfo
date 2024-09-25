@@ -5,6 +5,73 @@ date: 9/25/2024
 output: html_notebook
 ---
 
+## Skill Check 1 Debrief
+
+### Question 5: Lists
+
+I have created a list stored with the name `my_list` with the following code: 
+```{r}
+my_list <- list("flower" = c(1, 4.9, 18, 38, 20, 10.02),
+                "micha" = matrix(runif(30), nrow = 5),
+                "color" = data.frame("x" = c(1.1, 1.2, 1.3),
+                                     "y" = c(2.3, 5.6, 6.2)),
+                1:40)
+```
+
+How many members does this list contain? 
+
+```{r}
+length(my_list)
+```
+
+What data class is each member?
+
+```{r}
+class(my_list$flower)
+class(my_list[[2]])
+class(my_list$color)
+class(my_list[[4]])
+```
+
+How would you reference the integer 3 in `my_list`? (Version A)
+
+```{r}
+my_list[[4]][3]
+```
+
+How would you reference the fifth row and second column in the matrix in my_list? (Version B)
+
+```{r}
+my_list$micha[5,2]
+my_list[[2]][5,2]
+```
+
+### Question 6: Data Frames
+
+Calculate the mean number of breaks in the warpbreaks data set if the tension is either low (L) or medium (M). (Version A)
+
+```{r}
+mean(warpbreaks$breaks[warpbreaks$tension != "H"])
+mean(warpbreaks$breaks[warpbreaks$tension == "L" | 
+                         warpbreaks$tension == "M"])
+```
+
+Calculate the mean number of breaks in the warpbreaks data set for wool type B if the tension is high (H). (Version B)
+
+```{r}
+mean(warpbreaks$breaks[warpbreaks$wool == "B" &
+                         warpbreaks$tension == "H"])
+```
+
+### Question 8: Factors
+
+Create an ordered factor vector with the levels good < better < best to describe your preference for the following disciplines: biology, chemistry, mathematics, computer science, humanities. (Version B)
+
+```{r}
+factor(c("best", "good", "better", "best", "good"), ordered = T,
+       levels = c("good","better", "best"))
+```
+
 ## Formatting Markdown Text 
 
 Formatting Markdown text is easy! Just a few rules to learn: 
