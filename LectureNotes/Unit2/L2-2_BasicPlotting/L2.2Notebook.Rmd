@@ -27,8 +27,9 @@ length(my_list)
 What data class is each member?
 
 ```{r}
+class(my_list[[1]])
 class(my_list$flower)
-class(my_list[[2]])
+class(my_list$micha)
 class(my_list$color)
 class(my_list[[4]])
 ```
@@ -51,9 +52,9 @@ my_list[[2]][5,2]
 Calculate the mean number of breaks in the warpbreaks data set if the tension is either low (L) or medium (M). (Version A)
 
 ```{r}
+data("warpbreaks")
 mean(warpbreaks$breaks[warpbreaks$tension != "H"])
-mean(warpbreaks$breaks[warpbreaks$tension == "L" | 
-                         warpbreaks$tension == "M"])
+mean(warpbreaks$breaks[warpbreaks$tension == "M" | warpbreaks$tension == "L"])
 ```
 
 Calculate the mean number of breaks in the warpbreaks data set for wool type B if the tension is high (H). (Version B)
@@ -70,6 +71,7 @@ Create an ordered factor vector with the levels good < better < best to describe
 ```{r}
 factor(c("best", "good", "better", "best", "good"), ordered = T,
        levels = c("good","better", "best"))
+factor(c("biology", "mathematics"), levels = c("good", "better"))
 ```
 
 ## Formatting Markdown Text 
