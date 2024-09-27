@@ -1,0 +1,70 @@
+---
+title: "Assignment 2.4"
+author: "Your Name"
+date: "10/2/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section ##'
+---
+
+
+## Assignment 2.4
+
+```{r, include=TRUE}
+# Loading required libraries
+
+```
+
+
+### Question 1
+
+*Download the EBKB_WaterQualityData_2020084.csv data file in the Assignment/Unit2/data folder. This data set is the Department of the Interior  \href{https://catalog.data.gov/dataset/water-quality-data-41c5e}{https://catalog.data.gov/dataset/water-quality-data-41c5e} and represents water quality values collected by volunteers at the Back Bay National Wildlife Refuge from 1994 to 2020.*
+
+*a. Read data in using `read.csv()`.*
+
+```{r, include=TRUE}
+
+```
+
+*b. Clean the data of any empty columns and rows, standardize column names, convert the site_id column into a factor. Use the `convert_to_date()` function in the janitor package to convert the read_date column into a date.*
+
+```{r, include=TRUE}
+
+```
+
+
+*c. What are the columns in this data set and what data class are each?*
+```{r, include=TRUE}
+
+```
+### Question 2
+
+*Has there been a change in dissolved oxygen over time?*
+
+```{r, include=TRUE}
+
+```
+
+
+
+### Question 3
+
+*Is there a relationship between dissolved oxygen and water temperature?*
+
+```{r, include=TRUE}
+
+```
+
+
+
+
+### Question 4
+
+*Is there a difference in water pH between sites?*
+
+
+```{r, include=TRUE}
+
+```
+
