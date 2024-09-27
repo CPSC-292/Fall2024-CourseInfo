@@ -1,0 +1,15 @@
+---
+title: "Plot the World Map"
+author: Lindsay Waldrop
+date: 10/4/2024
+output: html_notebook
+---
+
+
+```{r}
+library(ggplot2)
+world <- map_data("world")
+ggplot(world, aes(y=lat,x=long)) + 
+  geom_polygon(aes(group=group), fill="white", col = "black") 
+  
+```
