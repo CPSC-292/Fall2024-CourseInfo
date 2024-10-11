@@ -20,7 +20,7 @@ library(dplyr)
 
 ### Question 1
 
-*Write a 200-word (approximately) that summarizes and briefly explains the three major takeaways from Lecture 2.6 How We See. Your summary should explain:*
+*Write a 200-word (approximately) that summarizes and briefly explains the three major takeaways from Lecture 2.7 How We See. Your summary should explain:*
  
  * *What are the three main takeaways*
  * *What part of the biology dictates why they work that way*
