@@ -1,0 +1,53 @@
+---
+title: "Assignment 3.2"
+author: "Your Name"
+date: "10/25/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: "CPSC 292 Section ##"
+---
+
+## Assignment 3.2 
+
+```{r, include=TRUE}
+# Loading required libraries
+
+```
+
+### Question 1
+
+*Complete the following steps:*
+
+ a.  *Create a function that will take an object `x` and return the results of the following calculation: 4x^4  - sin(3x) + 12.*
+
+```{r, include=TRUE}
+
+```
+
+ b. *Use your function to calculate the result of ten random numbers. Store the results in another object.*
+ 
+```{r, include=TRUE}
+
+```
+
+ c. *Does your function perform a vectorized calculation? How do you know?*
+ 
+
+
+### Question 2
+
+*Make a function that reports the area of a land mass in the islands data set. The user input should be the name of the land mass. Include a line of code that uses the function as an example.*
+
+```{r, include=TRUE}
+
+```
+
+### Question 3
+
+*Make a function that reports a correlation value between two values in the Harman23.cor covariation matrix. The inputs should be two values in the covariance matrix. Include a line of code that uses the function as an example.*
+
+```{r, include=TRUE}
+
+```
+

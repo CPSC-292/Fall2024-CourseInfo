@@ -1,0 +1,64 @@
+---
+title: "Quick Animation Guide"
+output:
+  html_document:
+    df_print: paged
+---
+
+Here's a quick animation guide for setting up animated gifs from separate frames in a directory!
+
+First, be sure to install the magick package (it's on CRAN). Then, we'll load the two required libraries and create a little directory to hold the images that will be frames for our gif.
+
+```{r}
+library(magick)
+library(ggplot2)
+
+dir.create("irisplots", showWarnings = FALSE)
+```
+
+Next, we'll start with a general plot of the iris data set colored by species. 
+
+```{r}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) + geom_point()
+
+```
+
+We want to cycle through highlighting each species in red with the other two greyed out. Make a quick function that will take the species name and return a plot:
+
+```{r}
+species_color <- function(species_name){
+  species_factors <- unique(iris$Species)
+  species_factors <- species_factors[order(species_factors==species_name)]
+  iris$Species<- factor(iris$Species, ordered = T, levels = species_factors)
+  ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) + geom_point() +
+    scale_color_manual(values = c("gray", "gray", "red"))
+}
+```
+
+And then store each plot in a list p and save the individual frames in our directory:
+```{r}
+p <- list()
+species_factors <- unique(iris$Species)
+for (i in unique(iris$Species)) {
+  print(i)
+  p[[i]] <- species_color(i)
+  ggsave(paste0("irisplots/irisplot_",i,".png"), plot = p[[i]])
+}
+```
+
+
+Now, we're going to make an animated gif. The first command lists all files in the directory we stored our png's in. The next reads in those files using lapply, after that joins them together. The final command creates the animation with a frame rate of 1 frame per second.
+```{r}
+plot_list <- list.files("irisplots", full.names = TRUE)
+gif_files <- lapply(plot_list, image_read)
+gif_joined <- image_join(gif_files)
+gif_animated <- image_animate(gif_joined, fps = 1)
+image_write(image = gif_animated,
+            path = "irisplot_anim.gif")
+```
+
+That's it! The file "animation.gif" should be in the main directory. 
+```{r}
+gif_animated
+```
+Source: https://www.nagraj.net/notes/gifs-in-r/ was helpful in setting up this code using the magick package.

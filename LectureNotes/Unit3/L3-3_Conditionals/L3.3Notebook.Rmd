@@ -1,0 +1,166 @@
+---
+title: "Lecture 3.3 Notebook"
+author: "Lindsay Waldrop"
+date: "10/28/2024"
+output: html_notebook
+---
+
+## 3.3 Conditionals 
+
+Computers do one thing really, really well: the same task over and over again exactly the same way. However, they are really bad about making judgments and decisions! Flow control helps get around this by giving basic instructions for possible scenarios ahead of time. Two main components of flow control: conditional statements and looping. We will cover conditionals today and looping next time!
+
+### The basic if statement
+
+Here are two basic conditional statements, one which will always execute and one which will never execute:
+
+```{r include=TRUE}
+if(TRUE) print("This should always print.")
+if(FALSE) print("This shouldn't ever print.")
+```
+
+`if` will execute the code only if the condition is TRUE. In the example above, TRUE is always TRUE so the code always runs! In the next, FALSE is always FALSE so the code will never run. 
+
+Here, we'll use a mathematical phrase to test the value of `j`:
+
+```{r include=TRUE}
+j <- 0
+if(j == 0) print("This should print.")
+if(j != 0) print("This should't print.")
+```
+
+Since `j` is 0, the first if statement evalutes `j == 0` as TRUE: 
+
+```{r}
+j == 0
+```
+
+Since it is true, it prints! For the second statement, `j` is 0 so `j` isn't not equal to zero, so it is evaluated as FALSE:
+
+```{r}
+j != 0
+```
+
+So the second if statement does not run, since the condition `j != 0` is FALSE.
+
+For the stop light example, the following code will print go if the light is green, and will do nothing if light is something else. 
+
+```{r, include=TRUE}
+light <- "green"
+
+if(light == "green") print("go!")
+```
+
+Adding `else` option will give the computer something to do if the statement isn't TRUE. Here, go! will print if the light is green, and will print Stop! if the light is not green.
+
+```{r, include=TRUE}
+light <- "green"
+if(light == "green"){
+  print("go!")
+} else {
+  print("Stop!")
+}
+```
+
+### Check Your Understanding 
+
+Write a conditional that prints “higher” if the number `n` is above 10. 
+
+```{r, include=TRUE}
+n <- c(10, 11, 12)
+if(n > 10) { 
+  print("higher")
+}
+```
+
+
+### Adding Additional Conditions
+
+Adding `else if ()` can add an additional options of what light can be. Now, if the light is yellow, slow down! prints. 
+
+```{r, include=TRUE}
+light <- "red"
+
+if(light == "green"){
+  print("go!")
+} else if(light == "yellow"){
+  print("slow down!")
+} else {
+  print("STOP!")
+}
+```
+
+The `switch()` function can make multiple else if statements a little more compact. The first argument is the object to be evaluated, and the next are what it should do based on the value of the first. The last argument is what should happen if none of the others fit. 
+
+```{r, include=TRUE}
+switch(light,
+       "green" = print("go!"),
+       "yellow" = print("slow down!"),
+       print("STOP!")
+)
+```
+
+### Check Your Understanding
+
+Write a conditional that prints “higher” if the number `n` is above 10 and  “lower” if the number `n` is below 10. 
+
+```{r, include=TRUE}
+
+```
+
+Try adding a second condition statement to test so that the number j is also tested. Now make “higher” print if `j` and `n` are above 10 and lower if `j` and `n` are below 10. 
+
+```{r, include=TRUE}
+
+```
+
+
+### Nesting Conditional Statements
+
+Conditional statements can be nested as well, but don't go nuts. Too many nested conditionals can be hard to read! 
+
+```{r, include=TRUE}
+light <- "green"
+carinfront <- "stopped"
+
+if(light == "green"){
+  if(carinfront == "stopped"){
+    print("Honk!")
+  } else {
+    print("go!")
+  }
+} else if(light == "yellow"){
+  print("slow down!")
+} else {
+  print("STOP!")
+}
+```
+
+You'll notice that you can't pass a vector with length > 1 to a traditional if statement. It will give you an error:
+
+```{r, include=TRUE}
+light <- c("green", "yellow", "green", "red")
+if(light == "green"){
+    print("go!")
+} else {
+  print("STOP!")
+}
+```
+
+But see below, because there is a way to do this vectorized!
+
+### Vectorized conditionals 
+
+Using the vectorized `ifelse()` function will quickly evaluated the entire vector: 
+
+```{r, include=TRUE}
+ifelse(light=="green", "go!", "STOP!")
+```
+
+These can even be nested for multiple conditions: 
+
+```{r, include=TRUE}
+ifelse(light=="green", "go!", 
+       ifelse(light=="yellow", "slow down!", "STOP!")
+       )
+```
+
