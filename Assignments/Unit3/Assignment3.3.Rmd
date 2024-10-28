@@ -1,0 +1,45 @@
+---
+title: "Assignment 3.3"
+author: "Your Name"
+date: "10/28/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: "CPSC 292 Section ##"
+---
+
+## Assignment 3.3
+
+```{r, include=TRUE}
+# Loading required libraries
+ 
+
+```
+
+### Question 1
+
+*Write a set of conditional statements that will load a file in the `data/` folder based on the value of a number. The number and the value ranges are arbitrary. Do not use `switch()` for this question. Include at least four options. At the end, have the code plot two of the columns against each other using the column names and the `$` operator. *
+
+```{r}
+
+
+```
+
+
+### Question 2
+
+*Write a conditional using `switch()` that takes any input and does anything you'd like. A working example with four different options is all that's needed. Make it original and include a line demonstrating its function.*
+
+```{r, include=TRUE}
+ 
+```
+
+
+### Question 3
+
+*Write a vectorized conditional where 500 random numbers between 0 and 1 are listed as "top 50" if they are greater than or equal to 0.5 and "bottom 50" if they are less than 0.5. Save the output as an object in your environment.*
+
+```{r, include=TRUE}
+
+```
+
