@@ -28,7 +28,7 @@ if(j == 0) print("This should print.")
 if(j != 0) print("This should't print.")
 ```
 
-Since `j` is 0, the first if statement evalutes `j == 0` as TRUE: 
+Since `j` is 0, the first if statement evaluates `j == 0` as TRUE: 
 
 ```{r}
 j == 0
