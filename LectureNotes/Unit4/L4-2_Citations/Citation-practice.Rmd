@@ -1,0 +1,21 @@
+---
+title: "Citation Practice"
+author: "L.D. Waldrop"
+date: "11/20/2024"
+output:
+  html_document: default
+  word_document: default
+bibliography: myrefs.bib
+csl: biomed-research-international.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Citation practice
+
+In-text citation example: @buzek2022shape
+
+
+## References 
